@@ -861,6 +861,7 @@ nav.nav {
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0px 20px 100px 0px rgba(85, 85, 85, 0.08);
+  flex-grow: 1;
 
   img {
     width: 60px;
@@ -1869,5 +1870,26 @@ nav.nav {
     font-size: 1em;
     height: 45px;
     margin: 0;
+  }
+}
+.noti{
+  @include flex();
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  border-radius: 10px;
+  .itm{flex-grow: 0;
+    height: auto;
+    width: 100%;
+    padding: 40px 20px;
+    border-bottom: 5px solid $main;
+    h3{
+      font-size: 1.7em;
+    }
+    &:hover{
+      &::after{
+        display: none;
+      }
+    }
   }
 }
