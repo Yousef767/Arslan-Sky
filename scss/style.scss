@@ -1872,22 +1872,23 @@ nav.nav {
     margin: 0;
   }
 }
-.noti{
+.noti {
   @include flex();
   flex-direction: column;
   gap: 30px;
   width: 100%;
   border-radius: 10px;
-  .itm{flex-grow: 0;
+  .itm {
+    flex-grow: 0;
     height: auto;
     width: 100%;
     padding: 40px 20px;
     border-bottom: 5px solid $main;
-    h3{
+    h3 {
       font-size: 1.7em;
     }
-    &:hover{
-      &::after{
+    &:hover {
+      &::after {
         display: none;
       }
     }
