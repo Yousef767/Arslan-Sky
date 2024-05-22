@@ -1906,6 +1906,13 @@ nav.nav .logo span span {
   font-size: 1.1em;
   font-weight: 500;
 }
+.dataRow span:nth-child(2) {
+  color: #007913;
+}
+.dataRow span a {
+  color: #007913;
+  text-decoration: underline;
+}
 
 .fs11 span {
   color: #293d46;

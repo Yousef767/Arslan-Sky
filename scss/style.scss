@@ -1813,7 +1813,7 @@ nav.nav {
 }
 .dataRow {
   display: flex;
-  gap: 10px;
+gap: 10px;
   width: 100%;
   flex-wrap: wrap;
   color: #293d46;
@@ -1821,6 +1821,13 @@ nav.nav {
     white-space: nowrap;
     font-size: 1.1em;
     font-weight: 500;
+    &:nth-child(2){
+      color: $green;
+    }
+    a{
+      color: $green;
+      text-decoration: underline;
+    }
   }
 }
 
