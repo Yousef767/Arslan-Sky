@@ -288,9 +288,9 @@ nav.nav {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  button {
+  .button {
     @include flex();
-    height: 40px;
+    height: 45px;
     padding: 0 30px;
     @include noBorder();
     background-color: $main;
@@ -308,6 +308,7 @@ nav.nav {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
   label,
   span {
     padding-bottom: 5px;
@@ -1061,11 +1062,16 @@ nav.nav {
   @include flex();
   gap: 10px;
   .a {
+    @include flex();
     cursor: pointer;
     img {
       width: 20px !important;
       height: 20px !important;
       object-fit: contain;
+    }
+    i{
+      color: #747A89;
+      font-size: 1.2em;
     }
   }
 }
@@ -1079,7 +1085,7 @@ nav.nav {
   width: 100%;
   overflow: auto;
   &::-webkit-scrollbar {
-    height: 5px;
+    height: 10px;
   }
   &::-webkit-scrollbar-track {
     background: #fff;
@@ -1892,4 +1898,115 @@ nav.nav {
       }
     }
   }
+}
+
+
+.datepicker {
+  width: 100%;
+  margin: auto;
+  direction: ltr;
+}
+.calendar {
+  max-width: 300px;
+  margin: auto;
+  direction: ltr;
+}
+.calendar {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: #fff;
+  z-index: 4;
+}
+
+.datepicker i {
+  position: absolute;
+}
+.icon {
+  padding: 16px;
+  font-size: larger;
+  color: #555555;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title .arrow-control {
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+}
+.title .arrow-control:hover {
+  background-color: $main;
+  color: #fff;
+  cursor: pointer;
+}
+.title .year-month:hover,
+.title .year:hover {
+  color: #cccccc;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.week .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.28%;
+  font-weight: bold;
+}
+.list,
+.week {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.list .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.28%;
+  height: 42px;
+  margin-top: 1em;
+  /* padding: 7.14%; */
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+}
+.list .date:hover,
+.list .date:focus,
+.list .mon:hover,
+.list .mon:focus {
+  background-color: $main;
+  color: #fff;
+  cursor: pointer;
+}
+.list .fadeout {
+  color: #333333;
+}
+.list .today.active {
+  color: #333333;
+}
+.list .mon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 50px;
+  margin-top: 1em;
+  /* padding: 7.14%; */
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+}
+#yearlist .mon:first-child,
+#yearlist .mon:last-child {
+  color: #9d9d9d;
+}
+.d-none {
+  display: none;
 }
