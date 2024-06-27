@@ -1114,6 +1114,7 @@ nav.nav {
 .page {
   font-size: 0.8em;
   color: $main;
+  direction: rtl;
   span {
     color: $main;
     font-weight: 700;
@@ -2016,4 +2017,92 @@ gap: 10px;
 }
 .d-none {
   display: none;
+}
+
+.fle{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.countNum{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.gap10{
+  gap: 10px;
+  padding: 0 20px;
+  font-size: .9em;
+  cursor: pointer;
+}
+
+.message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 25;
+  animation: hideM 400ms ease 2500ms forwards;
+  
+}
+@keyframes hideM {
+  100%{
+    bottom: -100%;
+  }
+}
+
+.message  {
+  span{
+    padding: 0 30px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+    background-color: $main;
+    overflow: hidden;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      right: 0;
+      animation: fadeLine 2500ms linear forwards;
+      background-color: red;
+    }
+  }
+
+}
+@keyframes fadeLine {
+  100% {
+    right: 100%;
+  }
+}
+.card{
+  width: 100%;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  .btn{
+    width: fit-content;
+    padding: 0 25px;
+  }
+  .gap{
+    gap: 10px;
+    img{
+      width: 17px;
+    }
+  }
 }
